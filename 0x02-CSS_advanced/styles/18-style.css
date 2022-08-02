@@ -32,7 +32,7 @@
     --nav-item-font-size: var(--font-size-medium);
     --nav-item-letter-spacing: 0.04rem;
     --nav-item-displayP: inline-block;
-    --nav-item-margin: 0 0 3rem 0;
+    --nav-item-margin: 0 0 0.03rem 0;
     --nav-item-link-hover: var(--color-primary);
 }
 h1, h2, h2, h3, h4, h5, h6 {
