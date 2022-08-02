@@ -72,7 +72,7 @@ body {
 }
 .nav .nav-link {
     display: block;
-    padding: 50% 100%;
+    padding: 40% 40%;
 }
 .nav .nav-link:hover {
     color: var(--nav-item-link-hover);
