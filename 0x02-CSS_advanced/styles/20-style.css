@@ -149,7 +149,6 @@ ul.row {
     text-align: right;
 }
 .row::after {
-    content: none;
     display: table;
     clear: both;
 }
