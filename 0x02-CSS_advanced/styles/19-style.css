@@ -145,8 +145,8 @@ ul.row {
     font-size: var(--font-size-small);
     color: var(--text-color);
 }
-.footer .ul {
-    text-align: left;
+.footer ul {
+    text-align: right;
 }
 .container {
     width: 960px;
