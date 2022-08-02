@@ -32,7 +32,7 @@
     --nav-item-font-size: var(--font-size-medium);
     --nav-item-letter-spacing: 4%;
     --nav-item-displayP: inline-block;
-    --nav-item-margin: 0 0 3px 0;
+    --nav-item-margin: 0 0 3rem 0;
     --nav-item-link-hover: var(--color-primary);
 }
 h1, h2, h2, h3, h4, h5, h6 {
@@ -62,7 +62,7 @@ body {
     text-decoration: none;
     text-align: center;
 }
-.nav.nav-item {
+.nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
     font-size: var(--nav-item-font-size);
@@ -70,11 +70,11 @@ body {
     display: var(--nav-item-display);
     margin: var(--nav-item-margin);
 }
-.nav.nav-link {
+.nav .nav-link {
     display: block;
     padding: 50% 100% 50% 100%;
 }
-.nav.nav-link:hover {
+.nav .nav-link:hover {
     color: var(--nav-item-link-hover);
 }
 a:link {
