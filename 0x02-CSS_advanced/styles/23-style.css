@@ -169,6 +169,9 @@ ul.row {
 .footer-address {
     color: var(--text-color);
 }
+.social-link {
+    display: block;
+}
 .social-link > svg {
     fill: var(--text-color);
 }
