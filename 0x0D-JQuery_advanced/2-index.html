@@ -13,11 +13,12 @@
         <script type="application/javascript">
             function createFamilyTree() {
                 const table_rows = [[["Firstname"], ["Lastname"]], [["Guillaume"], ["Salva"]], [["Paulette"], ["Salva"]], [["Antoine"], ["Salva"]]];
-                let table = "<table><tr><th>" + table_rows[0][0] + "</th><th>" + table_rows[0][1] + "</th></tr>";
+                let table = "<table><thead><tr><th>" + table_rows[0][0] + "</th><th>" + table_rows[0][1] + "</th></tr></thead>";
+                table += "<tbody>"
                 for (let i = 1; i < 4; i++) {
                     table += "<tr><td>" + table_rows[i][0] + "</td><td>" + table_rows[i][1] + "</td></tr>";
                 }
-                table += "</table>";
+                table += "</tbody></table>";
                 $( "body" ).append(table);
             }
             createFamilyTree();
