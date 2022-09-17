@@ -11,28 +11,23 @@
             date.setDate(date.getDate()+10);
             let expires = "; expires=" + date.toUTCString();
             document.cookie = "username=" + document.getElementById("firstname").value + expires;
-            document.cookie = "email= " + document.getElementById("email").value + expires;
+            document.cookie = "email=" + document.getElementById("email").value + expires;
         }
         function showCookies() {
             let p = document.createElement("p");
-            const list = document.cookie.split('=');
-            const list2 = list[1].split(';');
-            p.innerHTML = "Email: " + list[2] + " - Firstname: " + list2[0];
+            i = getCookie('username');
+            j = getCookie('email');
+            console.log(j);
+            p.innerHTML = "Email: " + j + " - Firstname: " + i;
             document.body.append(p);
         }
         function getCookie(name) {
+            let cname = name + '=';
             let decodedCookie = decodeURIComponent(document.cookie);
-            let s = ""
             let ca = decodedCookie.split(';');
             for(let i = 0; i <ca.length; i += 2) {
                 let c = ca[i];
-                let e = ca[i + 1];
-                if (c.indexOf(name) == 9) {
-                    s += c.substring(0, c.length);
-                    s += " ";
-                    s += e.substring(0, e.length);
-                    return s;
-                }
+                return (c.substring(cname.length, c.length))
             }
             return "";
         }
