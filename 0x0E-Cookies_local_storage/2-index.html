@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-0</title>
+    <script>
+        function setCookies() {
+            let date = new Date();
+            date.setDate(date.getDate()+10);
+            let expires = "; expires=" + date.toUTCString();
+            document.cookie = "username=" + document.getElementById("firstname").value + expires;
+            document.cookie = "email= " + document.getElementById("email").value + expires;
+        }
+        function showCookies() {
+            let p = document.createElement("p");
+            const list = document.cookie.split('=');
+            const list2 = list[1].split(';');
+            p.innerHTML = "Email: " + list[2] + " - Firstname: " + list2[0];
+            document.body.append(p);
+        }
+        function getCookie(name) {
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let s = ""
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i <ca.length; i += 2) {
+                let c = ca[i];
+                let e = ca[i + 1];
+                if (c.indexOf(name) == 9) {
+                    s += c.substring(0, c.length);
+                    s += " ";
+                    s += e.substring(0, e.length);
+                    return s;
+                }
+            }
+            return "";
+        }
+    </script>
+    <style>
+        #log {
+            background-color: white;
+            border-radius: 8px;
+            border: 2px solid #808080
+        }
+        #sc {
+            background-color: white;
+            border-radius: 8px;
+            border: 2px solid #808080
+        }
+    </style>
+</head>
+<body>
+    <h1>Login to the website</h1>
+    <input type="text" id="firstname" placeholder="firstname"> <input type="text" id="email" placeholder="email"> <button id="log" onclick="setCookies()">Log me in</button>
+    <br>
+    <h1>Cookies</h1>
+    <button type="button" id="sc" onclick="showCookies()">Show the cookies</button>
+</body>
+</html>
